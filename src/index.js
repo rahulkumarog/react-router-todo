@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ToDo from "./components/ToDo/ToDo";
+import Create from "./components/ToDo/Create";
+import { Link, BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+	  <Router>
+		  <Routes>
+		  		<Route path="/" element={<App/>}>
+					<Route path='/todo' element={<ToDo/>}/>
+					<Route path='/create' element={<Create/>}/>
+				</Route>
+		  </Routes>
+	  </Router>
   </React.StrictMode>
 );
 
