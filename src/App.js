@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import { Link,NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 function App() {
 	
@@ -28,9 +28,9 @@ function App() {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
-
-			
         </header>
+		
+	  {/* Use To Dynamically render the components */}
 	  <Outlet/>
     </div>
   );
